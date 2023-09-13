@@ -1,0 +1,168 @@
+body {
+    padding: 0; /*Bordas ao redor da página*/
+    margin: 0; /* define a área de margem nos quatro lados do elemento */
+    height: 100vh; /* VH = Unidade que significa viewpoerrt, tamanho de 100vh para altura*/
+    width: 100%; /* Onde pega a largura cheia (apenas cheia para o body)*/
+    position: relative;/*relativamente à sua posição estática*/
+    background-image: url(../img/background.jpg);
+    background-image: cover; /*cover: indica que será coberto toda a pagina com essa img*/
+    background-repeat: no-repeat; /*usamos no-repeat onde não irá repetir a img caso mudamos o tamanho da tela*/
+    font-family: Arial, Helvetica, sans-serif; /*fonte Arial*/
+}
+
+body::before { /*Usamos Before para adicionar um conteúdo decorativo */
+    content: ''; /*Nesse caso não queremos gerar nenhum conteudo em um elemento*/
+    background-color: rgb(0, 0, 0, .5);
+    width: 100%; /*Largura 100%*/
+    height: 100%; /*Altura 100%*/
+    position: absolute; /*Posiciona qualquer elemento de acordo com o elemento pai que tenha posição diferente*/
+    top: 0; /*espaço acima do elemento*/
+    bottom: 0; /*define a possicão vertical do elemento em relação a borda inferior*/
+    left: 0; /*define a posição horizontal do elemento em relação a sua borda esquerda.*/
+    right: 0; /*define a posição horizontal do elemento em relação a sua borda direita.*/
+}
+
+.logo img {
+    height: 45px; /*Altura*/
+    width: 167px; /*Largura*/
+}
+
+.header {
+    padding: 20px 50px; /*o preenchimento superior e inferior é de 20px | o preenchimento direito e esquerdo é de 50px*/
+    position: relative; /*relativamente à sua posição estática*/
+    z-index: 10; /*especifica a ordem da pilha de um elemento do anúncio*/
+}
+
+.login_body {
+    padding: 60px; /*Tamanho do elemento*/
+    z-index: 90; /*especifica a ordem da pilha de um elemento do anúncio*/
+    position: relative; /*relativamente à sua posição estática*/
+    max-width: 450px; /*define largura maxima de um elemento*/
+    height: 550px; /*altura*/
+    margin-left: 50%; /*margim a esquerda*/
+    background-color: rgb(0, 0, 0, 0.75); /*cor do fundo da página*/
+    border-radius: 10px; /*borda 10px*/
+    box-sizing: border-box; /*altera a propriedade padrao da box model, usada para calcular larguras e alturas do elemento*/
+    transform: translateX(-50%); /*o lemento sera movido 50px para a esqueda, centralizando em relacao a sua div*/
+}
+
+.login_body h2 {
+    font-size: 32px; /*Tamanho da fonte*/
+    color: #fff; /*Cor da fonte*/
+    margin-top: 0; /* margem do topo da pagina*/
+}
+
+.login_body input {
+    height: 50px; /*Altura*/
+    width: 100%; /*Largura*/
+    color: #fff; /*Cor da fonte*/
+    background-color: #333; /*cor do fundo*/
+    border: none; /*Sem borda*/
+    border-radius: 5px; /*borda pequena de 5px*/
+    padding-left: 15px; /* borda pra esquerda*/
+    box-sizing: border-box; /*faz com que o navegador não calcule a dimensão de um elemento somando bordas e margens com altura e largura*/
+    outline: none; /*usada para remover a linha de contorno (linha de link)*/
+}
+
+.login_body input:hover {
+    background-color: #444; /*cor do fundo*/
+}
+
+.input_box {
+    margin-bottom: 25px; /*margem do botão*/
+}
+
+.login_body button {
+    height: 50px; /*Altura*/
+    width: 100%; /*Largura*/
+    color: #fff;  /*Cor da fonte*/
+    background-color: #e50914; /*Cor do fundo do elemento*/
+    border-radius: 3px; /*Borda pequena de 3px*/
+    font-weight: bold; /*Cor em negrito*/
+    font-size: 16px; /*tamanho da fonte*/
+    border: none; /* sem borda*/
+    margin-bottom: 10px; /*margem do botão*/
+}
+
+.login_body button:hover {
+    background-color: #fc1722; /*Cor do fundo*/
+    cursor: pointer; /*mãozinha quando passa em cima do link*/
+}
+
+.support {
+    display: flex; /*é usado para criar um container flexivel, organizados em uma unica linha*/
+    color: #b3b3b3; /*Cor da fonte*/
+    justify-content: space-between; /*usamos esse elemento para dar espacamento entre o lembre-se e o ajuda*/
+    font-size: 12px; /*tamanho da fonte*/
+    margin-bottom: 5px; /*margem do botão*/
+}
+
+.support input {
+    width: 15px; /*largura*/
+    height: 15px;/*altrura*/
+}
+
+.remember {
+    display: flex;/*itens dentro dessa div serão organizados por padrao horizontal e centralizados*/
+    align-items: center;/*itens alinhados aao centro*/
+}
+
+.remember span {
+    margin-right: 5px; /*é usada para definir a margem direita de um elemento*/
+    height: 25px;/*Altura*/
+}
+
+.help a {
+    text-decoration: none; /*Sem decoraçao no texto*/
+    color: #737373; /*Cor da fonte*/
+}
+
+.help a:hover {
+    text-decoration: underline; /*cria uma linha sublinhada abaixo do texto*/
+}
+
+.login_facebook {
+    display: flex;/*itens dentro dessa div serão organizados por padrao horizontal e centralizados*/
+    align-items: center; /*itens alinhados no centro*/
+    width: 100%; /*Largura */
+    color: #737373; /*Cor da fonte*/
+}
+
+.login_facebook span {
+    margin-right: 5px; /**/
+    font-size: 13px; /*tamanho da fonte*/
+}
+
+.login_facebook span a {
+    text-decoration: none ; /*sem texto decorado*/
+    color: #737373; /*Cor da fonte*/
+}
+
+.sign_up {
+    color: #737373; /*Cor da fonte*/
+    font-size: 16px; /*tamanho da fonte*/
+}
+
+.sign_up a {
+    color: #fff; /*Cor da fonte*/
+    font-size: 16px; /**/
+    text-decoration: none; /**/
+}
+
+.sign_up a:hover {
+    text-decoration: underline; /*cria uma linha sublinhada abaixo do texto*/
+}
+
+.terms {
+    color: #737373; /*Cor da fonte*/
+    font-size: 13px; /**/
+}
+
+.terms a {
+    text-decoration: none; /*sem texto decorado*/
+    color: #0071eb; /*Cor da fonte*/
+}
+
+.terms a:hover {
+    text-decoration: underline; /*cria uma linha sublinhada abaixo do texto*/
+}
